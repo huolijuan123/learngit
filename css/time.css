@@ -1,0 +1,91 @@
+.content{
+    width: 750px;
+    height: 1334px;
+    position: relative;
+    margin: 0 auto;
+}
+.background{
+    width: 100%;
+    height: 100%;
+}
+.top{
+    width: 100%;
+    font-size: 50px;
+    font-family: [PingFang];
+    color:#f6b37f;
+    position: absolute;
+    top:50px;
+    left:40px;
+}
+.body{
+    width: 600px;
+    height: 600px;
+    border:3px solid #fff;
+    position: absolute;
+    top:200px;
+    left: 75px;
+}
+.bodyTop{
+    height: 70px;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 42px;
+    color: #FFF;
+   
+
+}
+.bottom{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom:450px;
+    color: #e1e8f6;
+    font-size: 36px;
+    font-family: 宋体；
+}
+.star{
+    color:#f6b37f;
+}
+#id{
+    font-size: 36px;
+}
+.finish{
+    width: 550px;
+    height: 100px;
+    background-color: #f6b37f;
+    position: absolute;
+    bottom: 300px;
+    left: 100px;
+    color: #000;
+    font-size: 50px;
+    font-family: Adobe 黑体 Std;
+}
+#center{
+    position: absolute;
+    top: 20%;
+    left: 0px;
+}
+#center table{
+    width: 600px;
+    height: 420px;
+    margin-top:20px;
+    border:none;
+}
+#center table tr td{
+   /* width: 65px;
+    height: 65px;*/
+    border:none;
+    color: #fff;
+    text-align: center;  
+    font-size: 30px;
+    border-radius: 35px;
+}
+table th{
+    width: 65px;
+    height: 65px;
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+    border-radius: 35px;
+    border:none;    
+}

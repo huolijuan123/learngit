@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>   
+        <link rel="stylesheet" href="../css/floor.css">
+        <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css"  />
+        <style type="text/css">
+        </style>      
+    </head>
+    <body>
+    <div class="content">
+      <img class="background" src="../images/dormitory.png"/>
+      <div class="top"><span><&nbsp;&nbsp;A座三楼</span></div>
+      <div class="body">
+	      <div class="left">    
+          <button id="1" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="2" onblur="fun(this)" onfocus="fun1(this)"></button>         
+          <input type="button" style="background:#e1e8f6;opacity: 0" value="">
+          <input type="button" style="background:#e1e8f6;opacity: 0" value="">
+          <button id="3" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="4" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="5" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="6" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="7" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="8" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="9" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="10" onblur="fun(this)" onfocus="fun1(this)"></button>
+        </div>
+        <div class="mid">
+          <button id="11" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="12" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="13" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="14" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="15" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="16" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="17" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button  id="18"onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="19" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="20" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <button id="21" onblur="fun(this)" onfocus="fun1(this)"></button>
+          <input type="button" style="background:#535353" value="" disabled="ture">
+          <input type="button" style="background:#535353" value="" disabled="ture">
+          <input type="button" style="background:#535353" value="" disabled="ture">
+        </div>
+        <div class="right">
+          <div class="choose"><input type="button" style="background:#e1e8f6" disabled="ture" value=""><span>可选</span></div>
+          <div class="choose"><button style="background:#00f37e;color:red" disabled="ture"><img src="../images/check.png"></button>
+          <span>已选</span></div>
+          <div class="choose"><input type="button" style="background:#535353" disabled="ture" value=""><span>不可选</span></div>
+        </div>
+      </div>
+      <div class="bottom">
+        <span class="star"><i class="fa fa-star"></i></span>
+        <span id="num">您所选的房间是</span>
+      </div>
+      <div>     
+          <button type="button"  class="btn btn-primary finish">完成</button>          
+          </div>
+    </div>
+    </body>
+    <script type="text/JavaScript" src="../js/jquery-2.1.1.min.js"> </script>
+    <script type="text/javascript">
+    function fun1(obj){
+      obj.style.backgroundColor="#00f37e";
+      obj.innerHTML="<img src='../images/check.png'>";
+      var num=obj.id; //获取按钮的id
+      console.log(num)
+      document.getElementById('num').innerHTML='您所选的房间是30'+num+'';
+    }
+    function fun(obj){
+      obj.style.backgroundColor="#e1e8f6";
+      obj.innerHTML="";
+     
+    }
+  
+    </script>
+</html>

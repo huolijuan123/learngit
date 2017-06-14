@@ -1,0 +1,100 @@
+  <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>   
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css"  />
+        <style type="text/css">
+        </style>      
+    </head>
+    <body >
+        <div class="content">
+        <img class="background" src="../images/success.png" />
+        <div class="top"><span class="register1">请完善个人账户</span><br><span class="register2">PERFECT ACCOUNT</span></div> 
+        <div class="login">
+				<form>
+					<div class="form-group">
+						<div class="left">
+						    <i class="fa fa-user"></i>
+							<input type="text" id="name" value="用户名">
+						</div>				
+						<div class="right">					
+							<div class="true"><i class="fa fa-check"></i></div>
+							<div class="false"><i class="fa fa-close"></i></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="form-group">
+						<div class="left">
+							<i class="fa fa-lock"></i>
+							<input type="password" id="password" value="......">
+						</div>								
+						<div class="clear"></div>
+					</div>	
+					<div class="form-group">
+						<div class="left">
+							<i class="fa fa-lock"></i>	
+							<input type="text" id="pwd" class="code" value="确认密码">
+							<input type="password" id="pword" class="code" value="">	
+						</div>		
+						<div class="clear"></div>						
+					</div>							
+				</form>
+		        <div>     
+		          <button type="button"  class="btn btn-primary landing">完成</button>          
+		        </div> 
+		</div> 
+		</div>  
+    </body>
+    <script type="text/JavaScript" src="../js/jquery-2.1.1.min.js"> </script>
+    <script type="text/javascript">
+	    $("#name").focus(function(){
+			var pwditem = $(this).val();
+			if (pwditem = this.defaultValue) {
+	            pwditem = $(this).val(""); 
+	            $("#pwd").show();
+                $("#pword").hide();
+	        }; 
+	      });
+
+		$("#name").blur(function(){
+			var pwditem = $(this).val();
+			if(pwditem ==""){
+			    $(this).val(this.defaultValue); 
+			}
+		});
+		$("#password").focus(function(){
+			var pwditem = $(this).val();
+			if (pwditem = this.defaultValue) {
+	            pwditem = $(this).val("");
+	            $("#pwd").show();
+                $("#pword").hide(); 
+	        }; 
+	      });
+
+		$("#password").blur(function(){
+			var pwditem = $(this).val();
+			if(pwditem ==""){
+			    $(this).val(this.defaultValue); 
+			}
+		});
+      $("#pwd").focus(function(){
+		var pwditem = $(this).val();
+		if (pwditem = this.defaultValue) {
+            pwditem = $(this).val("");
+            $("#pwd").hide();
+            $("#pword").show(); 
+        }; 
+      });
+
+	$("#pwd").blur(function(){
+		var pwditem = $(this).val();
+		if(pwditem ==""){
+		    $(this).val(this.defaultValue); 
+		}
+	});
+	
+
+    </script>
+</html>

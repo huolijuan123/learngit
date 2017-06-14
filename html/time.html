@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>   
+        <link rel="stylesheet" href="../css/time.css">
+        <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css"  />
+        <style type="text/css">
+        </style>      
+    </head>
+    <body>
+    <div class="content">
+      <img class="background" src="../images/dormitory.png"/>
+      <div class="top"><&nbsp;&nbsp;申请时间</div>
+      <div class="body">
+          <div class="bodyTop">
+          <span class="month" style="margin-right: 30px;">May</span><span>.</span><span class="year" style="margin-left: 30px;">2017</span>
+          </div>
+          <div id="bodyMid">
+
+          </div>
+           <div id="center" >
+           <script type="text/JavaScript" src="../js/jquery-2.1.1.min.js"> </script>
+           <script language="JavaScript">
+            var my = new Date();    
+            function showdate() {
+             var k=1;
+             var j=1;
+             var today;
+             var tomonth;
+             var theday=1;//日期
+             var max;
+             var temp;
+             var tempday;//这个月第一天的星期
+             // document.write ("<b>" + my.getFullYear() + "-" + (my.getMonth()+1) + "</b>");
+             document.write ("<table>");
+             document.write ("<tr>");
+             document.write ("<th >SUN</th>");
+             document.write ("<th >MON</th>");
+             document.write ("<th >TUE</th>");
+             document.write ("<th >WED</th>");
+             document.write ("<th >THR</th>");
+             document.write ("<th >FRI</th>");
+             document.write ("<th >SAT</th>");
+             document.write ("</tr>");
+             temp=my.getDate();
+             my.setDate(1);
+             //document.write (my.getDate());
+             tempday=my.getDay();//返回第一天是星期几
+             my.setDate(temp);
+             today=my.getDay();//返回现在星期几
+           
+             switch ((my.getMonth()+1)) {
+              case 1:
+              case 3:
+              case 5:
+              case 7:
+              case 8:
+              case 10:
+              case 12:
+               max=31;
+               break;
+              case 4:
+              case 6:
+              case 9:
+              case 11:
+               max=30;
+               break;
+              default:
+               max=29;//这里没有考虑闰月！！
+              //document.write (max);
+             }
+             for(k=0;k<5;k++) {
+              document.write ("<tr>");
+              for(j=0;j<=6;j++) {
+               document.write ("<td>");
+               if(j>=(tempday)) {
+                tempday=0;//设置为最小，相当于取消判断条件
+                if(theday<=max) {
+                 document.write ("<span title=" + my.getFullYear() + "-" + (my.getMonth()+1) + "-" +theday + ">");
+                 if(theday==my.getDate())
+                  document.write ("<font color='green'>" + theday + "</font></span>");                 
+                 else
+                  document.write (theday + "</span>");
+                 theday++;
+                }
+               }
+               document.write ("</td>");
+              }
+              document.write ("</tr>");
+             }
+             document.write ("</table>");
+            }
+          
+            showdate();
+        </script>
+       </div>
+         
+      </div>
+      <div class="bottom">
+        <span class="star"><i class="fa fa-star"></i></span>
+        <span id ="num">您所选的日期是</span>
+      </div>
+      <div>     
+          <button type="button"  class="btn btn-primary finish">完成</button>          
+          </div>
+    </div>
+    </body>
+    <script type="text/JavaScript" src="../js/jquery-2.1.1.min.js"> </script>
+    <script type="text/javascript">
+        var date = new Date(); 
+        var month= date.getMonth()+1; 
+        $("table tr td").click(function(){
+            var text=$(this).text();
+            console.log(month);
+            $(this).css("background-color","#529ed7").siblings().css("background-color","");
+            $(this).parent().siblings().find("td").css("background-color","");
+           document.getElementById('num').innerHTML="您所选的日期是"+month+"月"+text+"号";
+          })
+         
+    </script>
+</html>

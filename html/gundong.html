@@ -1,0 +1,173 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="图片切换,滚轮,jquery" />
+<meta name="description" content="keleyi，演示HTML、CSS、jquery、ASP.NET案例和示例" />
+<title>js鼠标滚轮滚动图片切换效果-柯乐义</title><base target="_blank" />
+ 
+<style type="text/css">
+img{border:none; }
+.clear{clear:both}
+.demo{width:860px; height:300px; margin:20px auto; position:relative; background:#e8f5fe; overflow:hidden}
+#images-keleyi-com{ margin:20px 0 0 60px; width:860px}
+#images-keleyi-com img{position:absolute; margin-top:-160px;}
+#loading-keleyi-com{margin:0; color:#fff; text-align:center}
+#loading-keleyi-com img{position:ralative; margin:0}
+#captions-keleyi-com{position:relative; height:24px; line-height:24px; top:100px; left:320px; background:url(http://keleyi.com/keleyi/phtml/image/12/images/cap_bg.png) no-repeat center center; color:#fff; font-weight:bold; text-align:center; z-index:10000}
+#scrollbar-keleyi-com{position:relative; top:-100px; height:2px; background:#abcd3a url(http://keleyi.com/keleyi/phtml/image/12/images/scroll.gif) repeat-x; z-index:10001}
+#slider-keleyi-com{position:absolute; width:15px; height:4px; margin:-1px 0 0 -1px; background:url(http://keleyi.com/keleyi/phtml/image/12/images/bar.gif) no-repeat; z-index:10002}
+a{color:Blue}
+</style>
+<script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/gundong.js"></script>
+ 
+</head>
+ 
+<body>
+<div id="header">
+<div id="logo"><h1><a href="http://keleyi.com" title="返回keleyi首页">柯乐义</a></h1></div>
+</div>
+ 
+<div id="main">
+<h2 class="top_title"><a href="http://keleyi.com/view-blog-81.html">基于鼠标滚轮驱动的图片切换效果</a></h2>
+<div class="demo">
+<div id="imageflow-keleyi-com">
+<div id="loading-keleyi-com"><img src="images/loader.gif" alt="加载中" /></div>
+<div id="captions-keleyi-com">柯乐义</div>
+<div id="images-keleyi-com">
+<img src="http://down.keleyi.com/images/bing/2013-8-7_Honeybee_CobisRM_935C647_008_ZH-CN1223668775.jpg" alt="多彩图标按钮动画下拉菜单" longdesc="http://keleyi.com/a/bjac/cu727al8.htm" />
+<img src="http://down.keleyi.com/images/bing/2013-8-23_Fairytopia_ZH-CN6940724395_keleyi.jpg" alt="Fairytopia" longdesc="http://down.keleyi.com/images/bing/2013-8-23_Fairytopia_ZH-CN6940724395_keleyi.jpg" />
+<img src="http://down.keleyi.com/images/bing/2013-8-10_Toulouse_ZH-CN7808794431_keleyi.jpg" alt="Toulouse" longdesc="http://down.keleyi.com/images/bing/2013-8-10_Toulouse_ZH-CN7808794431_keleyi.jpg" />
+<img src="http://down.keleyi.com/images/bing/2013-8-18_SpiritBear_ZH-CN8342221823_keleyi.jpg" alt="SpiritBear" longdesc="http://down.keleyi.com/images/bing/2013-8-18_SpiritBear_ZH-CN8342221823_keleyi.jpg" />
+<img src="http://down.keleyi.com/images/bing/2013-8-22_KataleKhorCave_ZH-CN6707191757_keleyi.jpg" alt="弹出灯箱窗口浏览图片" longdesc="http://keleyi.com/a/bjac/ppdss7ux.htm" />
+<img src="http://down.keleyi.com/images/bing/2013-9-27_BoliviaSalt_ZH-CN10259156901_keleyi.jpg" alt="BoliviaSalt" longdesc="http://down.keleyi.com/images/bing/2013-9-27_BoliviaSalt_ZH-CN10259156901_keleyi.jpg" />
+<img src="http://down.keleyi.com/images/bing/2013-9-3_DwarfGoby_ZH-CN11409083216_keleyi.jpg" alt="DwarfGoby" longdesc="http://down.keleyi.com/images/bing/2013-9-3_DwarfGoby_ZH-CN11409083216_keleyi.jpg" />
+</div>
+<div id="scrollbar-keleyi-com">
+<div id="slider-keleyi-com"></div>
+</div>
+</div>
+ 
+</div>
+<br/>
+把光标停在图片上，转动鼠标滚轮就可以切换图片，也可以拖动下方水平的滚动条，也可以点击非顶端的图片切换到对应图。
+</div>
+<div id="footer">
+<p>Powered by keleyi.com 出处：<a href="http://keleyi.com">keleyi.com</a> <a href="http://keleyi.com/a/bjac/kvqcktk6.htm">原文</a></p>
+</div>
+<p id="stat"></p>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>   
+        <link rel="stylesheet" href="../css/hotle.css">
+        <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css"  />
+        <style type="text/css">
+        </style>      
+    </head>
+    <body>
+    
+    
+    <div class="rgt_nor_box">
+            <div id="scro_top" class="scro_up"></div>
+
+            <ul id="all_items" class="rgt_carlist">
+             <li><a href="#">金杯手动档，9座，柴油 </a></li>
+                <li><a href="#">POLO1.4 08舒适型</a></li>
+                <li><a href="#">福克斯3厢1.8MT</a></li>
+                <li><a href="#">金杯手动档，9座，柴油 </a></li>
+                <li><a href="#">帕萨特SVW718豪华款 </a></li>
+                <li><a href="#">福克斯3厢1.8MT</a></li>
+                <li><a href="#">金杯手动档，9座，柴油 </a></li>
+                <li><a href="#">金杯手动档，9座，柴油 </a></li>
+                <li><a href="#">POLO1.4 08舒适型</a></li>
+                <li><a href="#">福克斯3厢1.8MT</a></li>
+                <li><a href="#">金杯手动档，9座，柴油 </a></li>
+                <li><a href="#">帕萨特SVW718豪华款 </a></li>
+                <li><a href="#">福克斯3厢1.8MT</a></li>
+                <li><a href="#">金杯手动档，9座，柴油 </a></li>
+            </ul>
+
+            <div id="scro_bottom" class="scro_down"></div>
+</div>
+      <script src="../js/jquery-2.1.1.min.js"></script>
+
+      <script type="text/javascript">
+      console.log(123456);
+ 
+
+
+
+
+function addLoadEvent(func){
+ var oldonload = window.onload;
+ if(typeof window.onload!= 'function' ){
+   window.onload = func;
+ }
+ else{
+  window.onload = function(){
+  oldonload();
+  func();
+  }
+ }
+}
+
+vscroll = function sglVscroll(){
+ if(!document.getElementById ||!document.getElementsByTagName ||!document.getElementById("all_items")||!document.getElementById("scro_top")||!document.getElementById("scro_bottom") ) return false;
+ var i = 1;//每次滚动一个像素
+ var obj= document.getElementById("all_items");
+ obj.scrollTop = 0;
+ var lists = obj.getElementsByTagName("li");//检查ul里面有多少个li
+ var height = lists.length*25;
+ var dist = height-125;//检查ul可以滚动的距离
+ var up_btn = document.getElementById("scro_top");
+ var down_btn = document.getElementById("scro_bottom");
+ var timeid;
+ //把下面的函数作为一个变量传给setinterval才不会出问题
+ toward_up=function(){
+  var count = obj.scrollTop;
+  if(count>0){
+   count -= i;
+   obj.scrollTop = count;
+  }
+ }
+ toward_down=function(){
+
+  var count = obj.scrollTop;
+  if(count<dist){
+   count +=i;
+   obj.scrollTop = count;
+  }
+ }
+
+ //鼠标在向上按钮时的效果
+ up_btn.onmouseover = function(){
+  timeid=setInterval(toward_up,20);
+  $(this).className = "scro_up2";
+ }
+ up_btn.onmouseout = function(){
+  clearInterval(timeid);
+  $(this).className = "scro_up";
+ }
+ //鼠标在向下按钮时的效果
+ down_btn.onmouseover = function(){
+  timeid=setInterval(toward_down,20);
+  $(this).className = "scro_down2";
+ }
+ down_btn.onmouseout = function(){
+  clearInterval(timeid);
+  $(this).className = "scro_down";
+ }
+}
+addLoadEvent(vscroll);
+      </script>
+    </body>
+</html>
+
